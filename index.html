@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador Alura Challange One</title>
+    <link rel="stylesheet" href="styles.css" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <img class="logo" src="logo.png">
+    <div class="conjunto">
+        <section class="division_izq">
+            <div class="division_izq_div">
+                <textarea class="mensaje_entrada" type="text" id='input' name="texto_entrada" placeholder="Ingrese el texto aquí"></textarea>
+                <div class="advertencia">
+                    <img src="advertencia.png">
+                    <p class="advertencia_texto">Solo letras minúsculas y sin acentos</p>
+                </div>
+                <button onclick="encriptar()" class="boton_encriptar">Encriptar</button>
+                <button onclick="desencriptar()" class="boton_desencriptar">Desencriptar</button>   
+            </div>
+            <div class="advertencia">
+                <img class='autor' src="autor.png">
+                <p class="advertencia_texto">Desarrollado por Eduardo Hipólito - 2023</p>
+            </div>
+        </section>
+        <section class="division_der">
+            <div class="cuadro_der">
+                <textarea type="text" id='output' name="texto_salida" readonly></textarea>
+                <div id="no_encontrado">
+                    <img src="no_encontrado.png" alt="img_no_encontrado"/>
+                    <p class="titulo_no_encontrado">Ningún mensaje fue encontrado</p>
+                    <p class="parrafo_no_encontrado">Ingresa el texto que deseas encriptar o desencriptar.</p>
+                </div>
+                <button onclick="copiar()" id="boton_copiar">Copiar</button>
+            </div>
+        </section>
+    </div>
+    <script>
+        function encriptar(){
+            const texto = document.getElementById("input").value;
+
+            const textoConvertido = texto
+                .replace(/e/g, "enter")
+                .replace(/i/g, "imes")
+                .replace(/a/g, "ai")
+                .replace(/o/g, "ober")
+                .replace(/u/g, "ufat")
+
+            document.getElementById("output").value = textoConvertido;
+            const textarea = document.getElementById("output");
+            const div = document.getElementById("no_encontrado");
+
+            if (textarea.value.length === 0) {
+                div.style.visibility = "visible";
+            } else {
+                div.style.visibility = "hidden";
+            }
+            }
+
+        function desencriptar(){
+            const texto = document.getElementById("input").value;
+
+            const textoConvertido = texto
+                .replace(/enter/g, "e")
+                .replace(/imes/g, "i")
+                .replace(/ai/g, "a")
+                .replace(/ober/g, "o")
+                .replace(/ufat/g, "u")
+
+            document.getElementById("output").value = textoConvertido;
+            const textarea = document.getElementById("output");
+            const div = document.getElementById("no_encontrado");
+
+            if (textarea.value.length === 0) {
+                div.style.visibility = "visible";
+            } else {
+                div.style.visibility = "hidden";
+            }
+        }
+
+
+        var textoCopiado = document.getElementById("output");
+        var botonCopiar = document.getElementById("boton_copiar");
+
+        botonCopiar.addEventListener("click", function() {
+        textoCopiado.select();
+        document.execCommand("copy");});    
+    </script>
+</body>
+</html>

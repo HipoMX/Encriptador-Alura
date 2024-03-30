@@ -1,0 +1,156 @@
+body {
+    position: absolute;
+    background-color: #E5E5E5;
+    padding: 0 0 30px 0;
+}
+
+.logo{
+    position: absolute;
+    margin: 48px 0 0 44px ;
+}
+
+/* .division_izq_div {
+    background-color: blue;
+    padding: 20px;
+    border-radius: 16px;
+} */
+
+#input{
+    background-color: #E5E5E5;
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    border: 10px;
+    border-color: blue;
+    outline: none;
+    /*line-height: 150%;*/
+    width: 577px;
+    height: 48px;
+    font-weight: bold;
+    color: #0A3871;
+    padding-bottom: 300px;
+}
+
+#input::placeholder {
+    color: #0A3871;
+    font-weight: bold;
+}
+
+#output{
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    outline: none;
+    width: 308px;
+    height: 535px;
+    font-weight: bold;
+    color: #495057;
+    padding: 10px 10px 10px 10px;
+    background-color: transparent;
+    border-radius: 32px;
+    border: none;
+    line-height: 150%;
+}
+
+#output::placeholder {
+    color: #0A3871;
+    font-weight: bold;
+}
+
+.cuadro_der {
+    position: relative;
+    padding: 10px 10px 5px 10px;
+    border-radius: 32px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+.advertencia img{
+    display: inline-block;
+}
+
+.advertencia p {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    color: #495057
+}
+
+.autor {
+    width: 16px;
+    height: 16px;
+}
+
+.boton_encriptar {
+    background-color: #0A3871;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: #D8DFE8;
+    border-radius: 24px;
+    border-color: #0A3871;
+    width: 328px;
+    height: 67px;
+    margin: 0 0 40px 0;
+}
+
+.boton_desencriptar {
+    background-color: #D8DFE8;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: #0A3871;
+    border-radius: 24px;
+    border-color: #0A3871;
+    width: 328px;
+    height: 67px;
+    margin: 0 0 40px 0;
+}
+
+#boton_copiar {
+    background-color: #FFFFFF;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: #0A3871;
+    border-radius: 24px;
+    border-color: #0A3871;
+    width: 328px;
+    height: 67px;
+    margin: 0 0 40px 0;
+}
+
+.titulo_no_encontrado {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;
+    color: #343A40;
+}
+
+.parrafo_no_encontrado{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: #495057;
+}
+
+#no_encontrado{
+    top: 35px;
+    position: absolute;
+}
+
+.division_izq {
+    margin: 168px  0 0 240px;
+    width: 70%;
+}
+
+.division_der {
+    width: 30%;
+}
+
+.conjunto {
+    display: flex;
+}
